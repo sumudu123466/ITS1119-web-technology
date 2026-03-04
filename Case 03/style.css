@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden; 
+}
+
+.box {
+    width: 150px;
+    height: 70px;
+    background-color: #ff2d75;
+    border-radius: 10px;
+    position: absolute;
+    
+   
+    animation: cornerMove 4s ease-in-out infinite;
+}
+
+@keyframes cornerMove {
+   
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+        background-color: #ff2d75;
+    }
+
+    
+    25% {
+        top: 0;
+        left: calc(100% - 150px); 
+        transform: rotate(180deg);
+        background-color: #fbc531;
+    }
+
+    
+    50% {
+        top: calc(100% - 70px); 
+        left: calc(100% - 150px);
+        transform: rotate(360deg);
+        background-color: #4cd137;
+    }
+
+    
+    75% {
+        top: calc(100% - 70px);
+        left: 0;
+        transform: rotate(540deg);
+        background-color: #00a8ff;
+    }
+
+    
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(720deg);
+        background-color: #ff2d75;
+    }
+}
