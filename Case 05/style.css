@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+
+.slider-viewport {
+    width: 100vw;  
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #000;
+}
+
+.image-track {
+    display: flex;
+    width: 400vw; 
+    animation: fullScreenSlide 20s infinite ease-in-out;
+}
+
+.image-track img {
+    width: 100vw;  
+    height: 100vh; 
+    object-fit: cover; 
+}
+
+@keyframes fullScreenSlide {
+   
+    0%, 10% { transform: translateX(0); }              
+    15%, 25% { transform: translateX(-100vw); }        
+    30%, 40% { transform: translateX(-200vw); }      
+    45%, 55% { transform: translateX(-300vw); }        
+
+    
+    60%, 70% { transform: translateX(-200vw); }        
+    75%, 85% { transform: translateX(-100vw); }        
+    90%, 100% { transform: translateX(0); }             
+}
